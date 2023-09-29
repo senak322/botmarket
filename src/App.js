@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 
 
 function App() {
-  const tg = window.Telegram.WebApp;
+  
 
   useEffect(() => {
     tg.ready()
