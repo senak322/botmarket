@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import "./Header.css";
 
 const Header = () => {
-  const { tg, user, onClose } = useTelegram();
+  const { user, onClose } = useTelegram();
   return (
     <header className="header">
       <Button onClick={onClose}>Закрыть</Button>
