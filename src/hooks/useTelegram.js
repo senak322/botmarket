@@ -1,21 +1,21 @@
-const tg = window.Telegram.WebApp;
-
 export function useTelegram() {
+  const tg = window.Telegram.WebApp;
+
   const onClose = () => {
     tg.close();
   };
 
   const onToggleBtn = () => {
-    if(tg.MainButton.isVisible) {
-        tg.MainButton.hide()
+    if (tg.MainButton.isVisible) {
+      tg.MainButton.hide();
     } else {
-        tg.MainButton.show()
+      tg.MainButton.show();
     }
-  }
+  };
   return {
     tg,
     user: tg.initDataUnsafe?.user?.username,
     onClose,
-    onToggleBtn
+    onToggleBtn,
   };
 }
