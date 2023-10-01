@@ -21,7 +21,7 @@ function App() {
     <Header />
     <Routes>
       <Route index element={<ProductList />}/>
-      <Route path='/form' element={<Form />}/>
+      <Route path='/form' element={<><div>Какой-то див</div><Form /></>}/>
     </Routes>
     </div>
   );
