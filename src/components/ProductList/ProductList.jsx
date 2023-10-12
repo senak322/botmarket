@@ -66,12 +66,13 @@ const ProductList = () => {
   const { tg, queryId } = useTelegram();
 
   const onSendData = useCallback(() => {
+    console.log('event');
     const data = {
         products: addedItems,
         totalPrice: getTotalPrice(addedItems),
         queryId: queryId
     };
-    fetch('http://192.168.0.2:8000/web-data', {
+    fetch('http://45.131.96.109:8000/web-data', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -88,7 +89,7 @@ const ProductList = () => {
   }, [onSendData]);
 
   const onAdd = (product) => {
-    const alreadyAdded = addedItems.find((item) => item.id === product.id);
+    const alreadyAdded = addedItems.find(item => item.id === product.id);
 
     let newItems = [];
 
